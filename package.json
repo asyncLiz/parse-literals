@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/asyncliz/parse-literals"
+    "url": "https://github.com/asyncLiz/parse-literals.git"
   },
   "scripts": {
     "clean": "rimraf \"src/**/*.{js*,d.ts}\" && rimraf \"index.{js*,d.ts}\" && rimraf \"{.nyc_output/,coverage/}\"",
