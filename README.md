@@ -9,7 +9,7 @@ Template literals are often used in JavaScript for HTML and CSS. This library al
 ## Usage
 
 ```js
-const pl = import * as pl from 'parse-literals';
+import * as pl from 'parse-literals';
 // const pl = require('parse-literals');
 
 const templates = pl.parseLiterals(`
