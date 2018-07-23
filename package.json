@@ -2,8 +2,8 @@
   "name": "parse-literals",
   "version": "1.0.0",
   "description": "Parse template literals from code",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "Liz Mitchell <asyncliz@gmail.com>",
   "license": "MIT",
   "keywords": [
