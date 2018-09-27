@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.3"></a>
+
+## [1.0.3](https://github.com/asyncLiz/parse-literals/compare/v1.0.2...v1.0.3) (2018-09-27)
+
+### Bug Fixes
+
+- parse escaped characters properly ([7a677bb](https://github.com/asyncLiz/parse-literals/commit/7a677bb))
+
 <a name="1.0.2"></a>
 
 ## 1.0.2 (2018-07-24)

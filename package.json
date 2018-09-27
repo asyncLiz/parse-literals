@@ -1,6 +1,6 @@
 {
   "name": "parse-literals",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse template literals from code",
   "main": "index.js",
   "types": "index.d.ts",
