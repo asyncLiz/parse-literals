@@ -3,18 +3,18 @@ import typescript from './strategies/typescript';
 
 export interface ParseLiteralsOptions {
   fileName?: string;
-  strategy?: Strategy<any>;
+  strategy?: Partial<Strategy<any>>;
 }
 
 export function parseLiterals(
   source: string,
   options: ParseLiteralsOptions = {}
 ): Template[] {
-  if (!options.strategy) {
-    options.strategy = typescript;
-  }
+  const strategy = {
+    ...(<Strategy<any>>typescript),
+    ...(options.strategy || {})
+  };
 
-  const { strategy } = options;
   const literals: Template[] = [];
   const visitedTemplates: any[] = [];
   strategy.walkNodes(strategy.getRootNode(source, options.fileName), node => {
