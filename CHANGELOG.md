@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+
+# [1.1.0](https://github.com/asyncLiz/parse-literals/compare/v1.0.3...v1.1.0) (2018-10-24)
+
+### Bug Fixes
+
+- handle "return `simple`" style literals ([f0e30ab](https://github.com/asyncLiz/parse-literals/commit/f0e30ab))
+
+### Features
+
+- allow partial strategy overrides ([c970ac9](https://github.com/asyncLiz/parse-literals/commit/c970ac9))
+
 <a name="1.0.3"></a>
 
 ## [1.0.3](https://github.com/asyncLiz/parse-literals/compare/v1.0.2...v1.0.3) (2018-09-27)
