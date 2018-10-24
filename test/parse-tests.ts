@@ -41,20 +41,20 @@ export default function createParseTests(options: ParseTestsOptions = {}) {
   it('should parse template with one expression', () => {
     expect(
       parseLiterals(
-        options.codePrefix + '`first${true}second`' + options.codeSuffix
+        options.codePrefix + 'return `first${true}second`' + options.codeSuffix
       )
     ).to.deep.equal([
       {
         parts: [
           {
             text: 'first',
-            start: 1 + offset,
-            end: 6 + offset
+            start: 8 + offset,
+            end: 13 + offset
           },
           {
             text: 'second',
-            start: 13 + offset,
-            end: 19 + offset
+            start: 20 + offset,
+            end: 26 + offset
           }
         ]
       }
@@ -65,7 +65,7 @@ export default function createParseTests(options: ParseTestsOptions = {}) {
     expect(
       parseLiterals(
         options.codePrefix +
-          '`first${true}second${false}third`' +
+          'return `first${true}second${false}third`' +
           options.codeSuffix
       )
     ).to.deep.equal([
@@ -73,18 +73,18 @@ export default function createParseTests(options: ParseTestsOptions = {}) {
         parts: [
           {
             text: 'first',
-            start: 1 + offset,
-            end: 6 + offset
+            start: 8 + offset,
+            end: 13 + offset
           },
           {
             text: 'second',
-            start: 13 + offset,
-            end: 19 + offset
+            start: 20 + offset,
+            end: 26 + offset
           },
           {
             text: 'third',
-            start: 27 + offset,
-            end: 32 + offset
+            start: 34 + offset,
+            end: 39 + offset
           }
         ]
       }
