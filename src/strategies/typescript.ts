@@ -51,15 +51,11 @@ export default <TypescriptStrategy>{
   },
   getHeadTemplatePart(node: ts.TemplateLiteral | ts.TemplateHead) {
     let fullText = node.getFullText(currentRoot);
-    let startOffset = 1;
-    while (fullText.startsWith(' ')) {
-      fullText = fullText.slice(1);
-      startOffset++;
-    }
-
+    // ignore prefix spaces and comments
+    const startOffset = fullText.indexOf('`') + 1;
     const endOffset = ts.isTemplateHead(node) ? -2 : -1;
     return {
-      text: fullText.slice(1, fullText.length + endOffset),
+      text: fullText.slice(startOffset, fullText.length + endOffset),
       start: node.pos + startOffset,
       end: node.end + endOffset
     };

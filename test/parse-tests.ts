@@ -224,4 +224,44 @@ export default function createParseTests(options: ParseTestsOptions = {}) {
       }
     ]);
   });
+
+  it('should parse literals with prefix comments', () => {
+    expect(
+      parseLiterals(
+        options.codePrefix +
+          '/* css */`/* more comments */:host { display: block }`' +
+          options.codeSuffix
+      )
+    ).to.deep.equal([
+      {
+        parts: [
+          {
+            text: '/* more comments */:host { display: block }',
+            start: 10 + offset,
+            end: 53 + offset
+          }
+        ]
+      }
+    ]);
+  });
+
+  it('should parse literals with suffix comments', () => {
+    expect(
+      parseLiterals(
+        options.codePrefix +
+          '`/* more comments */:host { display: block }`/* css */' +
+          options.codeSuffix
+      )
+    ).to.deep.equal([
+      {
+        parts: [
+          {
+            text: '/* more comments */:host { display: block }',
+            start: 1 + offset,
+            end: 44 + offset
+          }
+        ]
+      }
+    ]);
+  });
 }
