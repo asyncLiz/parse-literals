@@ -1,6 +1,18 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.2.0](https://github.com/asyncLiz/parse-literals/compare/v1.0.3...v1.2.0) (2020-02-08)
+
+### Features
+
+- allow partial strategy overrides ([c970ac9](https://github.com/asyncLiz/parse-literals/commit/c970ac91d9ec51c9d8d65fbe7f73da5e80b2ef7e))
+
+### Bug Fixes
+
+- failure when templates are prefixed with commentss ([3f34507](https://github.com/asyncLiz/parse-literals/commit/3f34507760e8e166477fcd736bd3b1c130002422))
+- handle "return `simple`" style literals ([f0e30ab](https://github.com/asyncLiz/parse-literals/commit/f0e30ab887c0d31287215965b56a5d4461e9a67d))
+- support TS v3 [#8](https://github.com/asyncLiz/parse-literals/issues/8) ([a5d7460](https://github.com/asyncLiz/parse-literals/commit/a5d7460a5a63a428b4d98348b71e5e00bc4326d4))
 
 <a name="1.1.1"></a>
 
