@@ -264,4 +264,29 @@ export default function createParseTests(options: ParseTestsOptions = {}) {
       }
     ]);
   });
+
+  it('should parse literals with comments in template tail', () => {
+    expect(
+      parseLiterals(
+        options.codePrefix +
+          '`head${true/* tail comment */}tail`' +
+          options.codeSuffix
+      )
+    ).to.deep.equal([
+      {
+        parts: [
+          {
+            text: 'head',
+            start: 1 + offset,
+            end: 5 + offset
+          },
+          {
+            text: 'tail',
+            start: 30 + offset,
+            end: 34 + offset
+          }
+        ]
+      }
+    ]);
+  });
 }

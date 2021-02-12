@@ -61,11 +61,15 @@ export default <TypescriptStrategy>{
     };
   },
   getMiddleTailTemplatePart(node: ts.TemplateMiddle | ts.TemplateTail) {
-    const fullText = node.getFullText(currentRoot);
+    // Use text, not fullText, to avoid prefix comments, which are part of the
+    // expression.
+    const text = node.getText(currentRoot);
     const endOffset = ts.isTemplateMiddle(node) ? 2 : 1;
     return {
-      text: fullText.slice(1, fullText.length - endOffset),
-      start: node.pos + 1,
+      text: text.slice(1, text.length - endOffset),
+      // Use getStart() and not node.pos, which may include prefix comments,
+      // which are part of the expression
+      start: node.getStart(currentRoot) + 1,
       end: node.end - endOffset
     };
   }
