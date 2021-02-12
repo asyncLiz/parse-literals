@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/asyncLiz/parse-literals/compare/v1.2.0...v1.2.1) (2021-02-12)
+
+
+### Bug Fixes
+
+* parse errors with JS comments at end of expressions ([3bf9053](https://github.com/asyncLiz/parse-literals/commit/3bf90534db2d343acfabc7610116479523c60f0d))
+* support typescript v4 ([9c00311](https://github.com/asyncLiz/parse-literals/commit/9c00311d5f549bf2e6e8637bc9ff72fc5c030a26))
+
 ## [1.2.0](https://github.com/asyncLiz/parse-literals/compare/v1.0.3...v1.2.0) (2020-02-08)
 
 ### Features
